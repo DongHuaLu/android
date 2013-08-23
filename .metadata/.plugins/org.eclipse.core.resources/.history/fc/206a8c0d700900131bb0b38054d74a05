@@ -1,0 +1,8 @@
+package com.dolph.dail.services;
+
+public class AddServices {
+
+	public int add(int x,int y){
+		return x+y;
+	}
+}

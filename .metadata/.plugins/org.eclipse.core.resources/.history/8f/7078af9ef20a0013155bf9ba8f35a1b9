@@ -1,0 +1,33 @@
+package com.example.listview;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import com.example.Dao.PersonDao2;
+import com.example.domain.Person;
+import com.example.listview.R;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		PersonDao2 dao = new PersonDao2(this);
+		List<Person> persons = dao.findPersonByName("");
+		ListView lv=(ListView) findViewById(R.id.lv);
+		
+		lv.setAdapter(adapter)
+	}
+	
+	
+	
+	private class MyAdapter implements ListAdapter{
+		
+	}
+
+}

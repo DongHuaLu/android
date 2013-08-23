@@ -1,0 +1,15 @@
+package com.example.sqlite.test;
+
+import android.test.AndroidTestCase;
+
+import com.example.Dao.PersonDao2;
+
+public class testPersonDao2 extends AndroidTestCase {
+	
+	private PersonDao2 dao=new PersonDao2(getContext());
+	
+	public void testAdd(){
+		
+	}
+
+}

@@ -1,0 +1,77 @@
+package com.example.listview;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
+
+public class PersonDBProvider extends ContentProvider {
+
+	// 定义一个uri的匹配器,用于匹配uri,如果不满足条件则返回-1
+	private static UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+	private static final int INSERT = 1;
+	private static final int DELETE = 2;
+	private static final int UPDATE = 3;
+	private static final int QUERY = 4;
+	private PersonSQLiteOpenHelper helper;
+
+	static {
+		matcher.addURI("com.example.provider.personprovider", "insert", INSERT);
+		matcher.addURI("com.example.provider.personprovider", "delete", DELETE);
+		matcher.addURI("com.example.provider.personprovider", "update", UPDATE);
+		matcher.addURI("com.example.provider.personprovider", "query", QUERY);
+	}
+
+	// content://com.example.provider.personprovider/insert
+	// content://com.example.provider.personprovider/delete
+	// content://com.example.provider.personprovider/update
+	// content://com.example.provider.personprovider/query
+
+	@Override
+	public boolean onCreate() {
+		helper=new PersonSQLiteOpenHelper(getContext());
+		return false;
+	}
+
+	@Override
+	public Cursor query(Uri uri, String[] projection, String selection,
+			String[] selectionArgs, String sortOrder) {
+		if (matcher.match(uri)==QUERY){
+			SQLiteDatabase db=helper.getReadableDatabase();
+			Cursor cursor= db.query("person", projection, selection, selectionArgs, null, null, sortOrder, null);
+			return cursor;
+		}else{
+			throw new IllegalArgumentException("路径错误");
+		}
+	}
+
+	@Override
+	public String getType(Uri uri) {
+		return null;
+	}
+
+	@Override
+	public Uri insert(Uri uri, ContentValues values) {
+		if (matcher.match(uri)==INSERT){
+			SQLiteDatabase db=helper.getWritableDatabase();
+			db.insert("person", null, values);
+		}else{
+			throw new IllegalArgumentException("路径错误");
+		}
+		return 0;
+	}
+
+	@Override
+	public int delete(Uri uri, String selection, String[] selectionArgs) {
+		return 0;
+	}
+
+	@Override
+	public int update(Uri uri, ContentValues values, String selection,
+			String[] selectionArgs) {
+		return 0;
+	}
+
+}

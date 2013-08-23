@@ -1,0 +1,30 @@
+package com.example.Dao;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.sqlite.PersonSQLiteOpenHelper;
+
+public class PersonDao {
+	private PersonSQLiteOpenHelper helper;
+
+	public PersonDao(Context context) {
+		this.helper = new PersonSQLiteOpenHelper(context);
+	}
+
+	public void add(String name, String tel) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		db.execSQL("INSERT INTO person (name,tel) VALUES (?,?)", new Object[] {
+				name, tel });
+		db.close();
+	}
+
+	public void findByName(String name){
+		SQLiteDatabase db= helper.getReadableDatabase();
+		Cursor cursor=db.rawQuery("SELECT * FROM person WHERE name = ?", new String[]{name});
+		
+		db.close();
+		
+	}
+}

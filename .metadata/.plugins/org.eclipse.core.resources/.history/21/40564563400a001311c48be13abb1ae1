@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<smss>
+
+    <sms id="0" >
+
+        <address>
+1550
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="1" >
+
+        <address>
+1551
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="2" >
+
+        <address>
+1552
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="3" >
+
+        <address>
+1553
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="4" >
+
+        <address>
+1554
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="5" >
+
+        <address>
+1555
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="6" >
+
+        <address>
+1556
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="7" >
+
+        <address>
+1557
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="8" >
+
+        <address>
+1558
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="9" >
+
+        <address>
+1559
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="10" >
+
+        <address>
+15510
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="11" >
+
+        <address>
+15511
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="12" >
+
+        <address>
+15512
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="13" >
+
+        <address>
+15513
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="14" >
+
+        <address>
+15514
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="15" >
+
+        <address>
+15515
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="16" >
+
+        <address>
+15516
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="17" >
+
+        <address>
+15517
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="18" >
+
+        <address>
+15518
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="19" >
+
+        <address>
+15519
+        </address>
+
+        <date>
+1377072291333
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+</smss>

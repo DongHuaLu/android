@@ -1,0 +1,17 @@
+package com.example.sqlite.test;
+
+import android.test.AndroidTestCase;
+
+import com.example.Dao.PersonDao2;
+
+public class testPersonDao2 extends AndroidTestCase {
+	
+	
+	public void testAdd(){
+		PersonDao2 dao=new PersonDao2(getContext());
+		long r=dao.add("123", "321");
+		assertFalse(r==-1l);
+	}
+	
+
+}

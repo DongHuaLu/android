@@ -1,0 +1,31 @@
+package com.example.sqlite.test;
+
+import java.util.List;
+
+import android.database.sqlite.SQLiteDatabase;
+import android.test.AndroidTestCase;
+
+import com.example.Dao.PersonDao;
+import com.example.domain.Person;
+import com.example.sqlite.PersonSQLiteOpenHelper;
+
+public class testPersonDB extends AndroidTestCase {
+	
+    
+    public void testCreateDB(){
+    	PersonSQLiteOpenHelper helper=new PersonSQLiteOpenHelper(getContext());
+    	SQLiteDatabase db=helper.getWritableDatabase();
+    }
+    
+    public void testDB(){
+    	PersonDao dao=new PersonDao(getContext());
+    	dao.add("123", "321");
+    	dao.add("111", "222");
+    	
+    	List<Person> persons=dao.findTelByName("111");
+    	for (Person p:persons){
+    		
+    	}
+    }
+
+}

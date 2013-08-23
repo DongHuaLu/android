@@ -1,0 +1,45 @@
+package com.example.xml2.service;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import android.util.Xml;
+
+import com.example.xml2.domain.Sms;
+
+public class XmlService {
+
+	public List<Sms> getSmss(InputStream in) {
+
+		XmlPullParser parser = Xml.newPullParser();
+		try {
+			parser.setInput(in, "utf-8");
+			int type = parser.getEventType();
+			List<Sms> smss=null;
+			while (type!= XmlPullParser.END_DOCUMENT){
+				switch (type) {
+				case XmlPullParser.START_TAG:
+					if("smss".equals(parser.getName())){
+						smss=new ArrayList<Sms>();
+					}
+					break;
+
+				default:
+					break;
+				}
+				
+				type=parser.next();
+			}
+
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+}

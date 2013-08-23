@@ -1,0 +1,13 @@
+package com.example.sqlite.test;
+
+import android.test.AndroidTestCase;
+
+public class testPersonDao2 extends AndroidTestCase {
+	
+	private personDao2=new PersonDao2();
+	
+	public void testAdd(){
+		
+	}
+
+}

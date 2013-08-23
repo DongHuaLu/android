@@ -1,0 +1,40 @@
+package com.example.Dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.sqlite.PersonSQLiteOpenHelper;
+
+public class PersonDao2 {
+
+	private PersonSQLiteOpenHelper helper = null;
+
+	public PersonDao2(Context context) {
+		helper = new PersonSQLiteOpenHelper(context);
+	}
+
+	public long add(String name, String tel) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put("name", name);
+		values.put("tel", tel);
+		long id = db.insert("person", null, values);
+		db.close();
+		return id;
+	}
+
+	public void find(String name) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		Cursor cursor = db.query("person", null, "name=?",
+				new String[] { name }, null, null, null, null);
+		db.close();
+
+	}
+	
+	
+	public void update(String name,String tel){
+		
+	}
+}

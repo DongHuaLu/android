@@ -1,0 +1,15 @@
+package com.example.sqlite.test;
+
+import android.test.AndroidTestCase;
+
+import com.example.sqlite.PersonSQLiteOpenHelper;
+
+public class testPersonDB extends AndroidTestCase {
+	
+    
+    public void testCreateDB(){
+    	PersonSQLiteOpenHelper helper=new PersonSQLiteOpenHelper(getContext());
+    	helper.getWritableDatabase();
+    }
+
+}

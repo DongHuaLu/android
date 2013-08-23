@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<smss>
+
+    <sms id="0" >
+
+        <address>
+1550
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+2
+        </type>
+    </sms>
+
+    <sms id="1" >
+
+        <address>
+1551
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+
+    <sms id="2" >
+
+        <address>
+1552
+        </address>
+
+        <date>
+1377072291332
+        </date>
+
+        <type>
+1
+        </type>
+    </sms>
+</smss>
