@@ -1,0 +1,11 @@
+package com.example.utils;
+
+import java.io.InputStream;
+
+public class StreamTools {
+	
+	public static String readInputStream(InputStream in){
+		
+	}
+
+}

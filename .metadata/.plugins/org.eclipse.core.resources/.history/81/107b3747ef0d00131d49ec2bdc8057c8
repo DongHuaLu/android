@@ -1,0 +1,9 @@
+package com.example.utils;
+
+public class StreamTools {
+	
+	public static readInputStream(){
+		
+	}
+
+}

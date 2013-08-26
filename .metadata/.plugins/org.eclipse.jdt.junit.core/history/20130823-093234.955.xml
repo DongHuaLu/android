@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="testPersonDao2.testAdd (3)" project="Provider" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="htc-htc_evo_3d_x515m-HT22EV205710" time="0.69">
-    <testsuite name="com.example.sqlite.test.testPersonDao2" time="0.69">
-      <testcase name="testAdd " classname="com.example.sqlite.test.testPersonDao2" time="0.69"/>
-    </testsuite>
-  </testsuite>
-</testrun>

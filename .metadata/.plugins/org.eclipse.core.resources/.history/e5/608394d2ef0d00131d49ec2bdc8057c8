@@ -1,0 +1,21 @@
+package com.example.utils;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class StreamTools {
+
+	public static String readInputStream(InputStream in) {
+		int len = 0;
+		byte[] buffer = new byte[1024];
+
+		try {
+			while ((len = in.read(buffer)) != -1) {
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

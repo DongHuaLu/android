@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="testPersonDB.testCreateDB (3)" project="Provider" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="htc-htc_evo_3d_x515m-HT22EV205710" time="0.293">
-    <testsuite name="com.example.sqlite.test.testPersonDB" time="0.293">
-      <testcase name="testCreateDB " classname="com.example.sqlite.test.testPersonDB" time="0.293"/>
-    </testsuite>
-  </testsuite>
-</testrun>
