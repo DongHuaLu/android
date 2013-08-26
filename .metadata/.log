@@ -5205,3 +5205,6 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2013-08-26 15:24:38.909
 !MESSAGE Failed to load properties file for project '19Post'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-08-26 17:29:57.337
+!MESSAGE Failed to load properties file for project '19AsnycHttp'
