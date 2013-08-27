@@ -1,0 +1,21 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+public class Demo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//1.连接服务器,获取文件长度,在本地创建一个大小一样的空文件
+		String path="http://10.200.0.157:8080/1.ext";
+		try {
+			URL url=new URL(path);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

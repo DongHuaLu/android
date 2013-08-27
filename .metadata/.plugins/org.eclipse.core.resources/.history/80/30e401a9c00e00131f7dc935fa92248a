@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1000" />
+
+    <EditText
+        android:singleLine="true"
+        android:text="http://h.hiphotos.baidu.com/album/w%3D2048/sign=fbf066e2a3cc7cd9fa2d33d90d39203f/35a85edf8db1cb131e0b411cdd54564e92584b5a.jpg"
+        android:id="@+id/et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入地址" />
+
+    <Button
+        android:id="@+id/bt"
+        android:onClick="click"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="submit" />
+
+</LinearLayout>
