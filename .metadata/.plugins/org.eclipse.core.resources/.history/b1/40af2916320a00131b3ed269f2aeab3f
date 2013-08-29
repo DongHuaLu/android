@@ -1,9 +1,0 @@
-package com.example.domain;
-
-public class Sms {
-	
-	private int type;
-	private String content;
-	private String address;
-
-}

@@ -1,9 +1,0 @@
-package com.dolph.dail.test;
-
-import android.test.AndroidTestCase;
-
-public class TestAdd extends AndroidTestCase {
-	
-	public void testAdd()
-
-}
