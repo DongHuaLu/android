@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="first activity" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="second activity" />
+
+    <Button
+        android:onClick="click2"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="system activity" />
+
+    <Button
+        android:id="@+id/button2"
+        android:onClick="click3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="action_view" />
+
+    <Button
+        android:id="@+id/button3"
+        android:onClick="click4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式意图激活第二个页面" />
+
+    <Button
+        android:id="@+id/button4"
+        android:onClick="click5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="激活发送短信" />
+
+</LinearLayout>

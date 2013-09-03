@@ -1,0 +1,20 @@
+package com.example.service;
+
+import java.util.List;
+
+import android.content.ContentResolver;
+import android.content.Context;
+import android.net.Uri;
+
+import com.example.domain.ContactInfo;
+
+public class ContactService {
+	
+	public List<ContactInfo> getContactsInfo(Context context){
+		ContentResolver resolver=context.getContentResolver();
+		Uri uri=Uri.parse("content://com.android.contacts/raw_contacts");
+		Uri dataUri = Uri.parse("content://com.android.contacts/data");
+		
+	}
+
+}

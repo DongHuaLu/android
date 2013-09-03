@@ -1,0 +1,15 @@
+package com.example.ipdail;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+public class OutCallReceiver extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		System.out.println("onReceive 发现外拨电话");
+		String number = getResultData();
+	}
+
+}

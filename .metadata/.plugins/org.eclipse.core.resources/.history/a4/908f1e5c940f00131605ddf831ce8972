@@ -1,0 +1,92 @@
+package com.example.dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.db.DatabaseHelper;
+
+public class ProcessDao {
+	private DatabaseHelper helper = null;
+
+	public ProcessDao(Context context) {
+		super();
+		this.helper =DatabaseHelper.getInstance(context);
+	}
+	
+	public synchronized SQLiteDatabase getReadableDatabase() {
+        if (mDatabase != null && mDatabase.isOpen()) {
+            return mDatabase;  // The database is already open for business
+        }
+
+        if (mIsInitializing) {
+            throw new IllegalStateException("getReadableDatabase called recursively");
+        }
+
+        try {
+            return getWritableDatabase();
+        } catch (SQLiteException e) {
+            if (mName == null) throw e;  // Can't open a temp database read-only!
+            Log.e(TAG, "Couldn't open " + mName + " for writing (will try read-only):", e);
+        }
+
+        SQLiteDatabase db = null;
+        try {
+            mIsInitializing = true;
+            String path = mContext.getDatabasePath(mName).getPath();
+            db = SQLiteDatabase.openDatabase(path, mFactory, SQLiteDatabase.OPEN_READONLY);
+            if (db.getVersion() != mNewVersion) {
+                throw new SQLiteException("Can't upgrade read-only database from version " +
+                        db.getVersion() + " to " + mNewVersion + ": " + path);
+            }
+
+            onOpen(db);
+            Log.w(TAG, "Opened " + mName + " in read-only mode");
+            mDatabase = db;
+            return mDatabase;
+        } finally {
+            mIsInitializing = false;
+            if (db != null && db != mDatabase) db.close();
+        }
+    }
+	
+	public synchronized long add(int threadId) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put("threadid", threadId);
+		values.put("total", 0);
+		long id = db.insert("process", null, values);
+		db.close();
+		return id;
+	}
+
+	public synchronized int getTotalByThreadId(int threadId) {
+		SQLiteDatabase db = helper.getReadableDatabase();
+		Cursor cursor = db.query("process", new String[] { "total" },
+				"threadid=?", new String[] { threadId + "" }, null, null, null,
+				null);
+		cursor.moveToNext();
+		int total = cursor.getInt(cursor.getColumnIndex("total"));
+		db.close();
+		return total;
+	}
+
+	public synchronized int updateByThreadId(int threadId, int total) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put("total", total);
+		int num = db.update("process", values, "threadId=?",
+				new String[] { threadId + "" });
+		db.close();
+		return num;
+	}
+
+	public synchronized int deleteByThreadId(int threadId) {
+		SQLiteDatabase db = helper.getWritableDatabase();
+		int num = db.delete("process", "threadid=?", new String[] { threadId
+				+ "" });
+		db.close();
+		return num;
+	}
+}

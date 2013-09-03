@@ -1,0 +1,25 @@
+package com.example.db;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class PorcessSQLiteIOpenHelper extends SQLiteOpenHelper {
+
+	public PorcessSQLiteIOpenHelper(Context context, String name,
+			CursorFactory factory, int version) {
+		super(context, "porcess", factory, version);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		db.execSQL("CREATE TABLE porcess (id integer primary key autoincrement, thread1 integer,thread2 integer,thread3 integer,thread4 integer thread5 integer) ");
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
