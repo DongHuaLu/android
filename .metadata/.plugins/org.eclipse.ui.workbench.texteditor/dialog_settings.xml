@@ -13,8 +13,9 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="process" key="selection"/>
+		<item value="call" key="selection"/>
 		<list key="findhistory">
+			<item value="call"/>
 			<item value="porcess"/>
 			<item value="post"/>
 			<item value="refreshProgress"/>
@@ -22,7 +23,6 @@
 			<item value="editText1"/>
 			<item value="editText2"/>
 			<item value="et_content"/>
-			<item value="textView1"/>
 		</list>
 		<list key="replacehistory">
 			<item value="process"/>
