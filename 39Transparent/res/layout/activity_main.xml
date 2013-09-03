@@ -11,13 +11,11 @@
     <ImageView
         android:id="@+id/after"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/after" />
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/before"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/before" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
