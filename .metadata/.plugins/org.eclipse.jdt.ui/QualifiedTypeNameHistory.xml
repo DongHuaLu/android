@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.example.callstatusservice.PhoneListenerService"/>
-<fullyQualifiedTypeName name="android.telephony.PhoneStateListener"/>
 <fullyQualifiedTypeName name="android.telephony.TelephonyManager"/>
 <fullyQualifiedTypeName name="com.example.callstatusservice.PhoneListenerService.MyPhoneStatusListener"/>
 <fullyQualifiedTypeName name="android.media.MediaRecorder"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="android.text.TextUtils"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.media.MediaPlayer.OnCompletionListener"/>
+<fullyQualifiedTypeName name="android.media.SoundPool"/>
+<fullyQualifiedTypeName name="com.example.soundpool.R.raw"/>
 </qualifiedTypeNameHistroy>
