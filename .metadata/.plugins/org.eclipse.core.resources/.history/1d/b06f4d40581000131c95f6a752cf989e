@@ -1,7 +1,0 @@
-package com.example.domain;
-
-public class ContactInfo {
-	private String name;
-	private String number;
-
-}
