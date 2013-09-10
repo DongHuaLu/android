@@ -29,7 +29,8 @@ public class MainActivity extends Activity {
 				intent, 0);
 		notification.setLatestEventInfo(this, "title", "text", pendingIntent);
 		notification.flags = Notification.FLAG_AUTO_CANCEL;
-		notification.vibrate=new long[]{200,300};
+		notification.vibrate = new long[] { 200, 300 };
+		notification.icon=R.drawable.ic_launcher;
 		// Notification notification = new Builder(this)
 		// .setContentTitle("title")
 		// .setContentText("subject")

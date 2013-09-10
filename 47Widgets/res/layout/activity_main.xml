@@ -8,12 +8,17 @@
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:prompt="@string/app_name" />
 
     <AutoCompleteTextView
         android:id="@+id/actv"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:completionThreshold="1" />
+        android:completionHint="请选择"
+        android:completionThreshold="1"
+        android:dropDownHorizontalOffset="50dp"
+        android:dropDownVerticalOffset="10dp"
+        android:dropDownWidth="150dp" />
 
 </LinearLayout>
