@@ -14,7 +14,7 @@ public class CodeCounter {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Counter c = new Counter("D:\\j2ee\\TwilioS2SH\\src");// 在这里修改目录
+		Counter c = new Counter("D:\\android2\\_TwilioApp\\src");// 在这里修改目录
 		c.countJavaFile(c.projectPath);
 
 	}

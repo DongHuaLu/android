@@ -1,0 +1,9 @@
+.metadata
+
+*.class
+
+*.dex
+
+*.apk
+*.jar
+*.ap_
